@@ -14,6 +14,7 @@ const carsSchema= new mongoose.Schema(
             trim:true
       
         },
+        //car type is same as brand. It was meant to mean brand
 
         carType:{
             type:String,
