@@ -3,7 +3,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import connectDb from './db/config.js'
 import carsRouter from "./routes/cars.js"
-
+import cors from 'cors'
 dotenv.config()
 
 const app= express()
