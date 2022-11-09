@@ -20,6 +20,9 @@ try{
 await connectDb(process.env.MONGO_URI,{
 
 })
+app.use(cors({
+    origin:'*'
+}))
 app.use(express.json());
 app.use('/cars',carsRouter);
 
