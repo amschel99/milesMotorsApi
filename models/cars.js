@@ -76,7 +76,7 @@ const carsSchema= new mongoose.Schema(
         engine:{
             type:String,
         },
-        mileAge:{
+       mileage:{
             type:String,
         },
         cubicCentimeters:{
