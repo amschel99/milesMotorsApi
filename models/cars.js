@@ -85,6 +85,9 @@ const carsSchema= new mongoose.Schema(
         },
         price:{
             type:Number,
+        },
+        description:{
+            type:String
         }
     }
 )
