@@ -1,10 +1,10 @@
  import carsModel from '../models/cars.js'
- export const addCar= async ()=>{
+ export const addCar= async (req,res)=>{
 
     try{
 
 const car=carsModel.create(req.body);
-  return res.status(201).json({message:"car created succesfully", car})
+  return res.status(201).json({"code":1})
     }
     catch(error){
 return res.status(500).send(`there was an error ${error.message}`)
