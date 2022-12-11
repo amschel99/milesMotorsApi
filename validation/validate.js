@@ -1,6 +1,6 @@
 const joi= require("joi")
 
-const registerSchema= joi.object({
+export const registerSchema= joi.object({
 
 name:joi.string(),
 
@@ -21,4 +21,3 @@ password: joi.string()
 
 //I don't think there is a need for this, because who in the first place allowed dummy values to be inserted in the database, Ofcourse the developer in me won't allow that to happen
 
-module.exports={registerSchema}
