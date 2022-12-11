@@ -1,7 +1,7 @@
  import carsModel from '../models/cars.js'
  export const  getAllCars=async  (req,res)=>{
     try{
-          const {brand,mileage,bodyStyle,name,numericFilters}=req.query
+          const {brand,mileage,bodyStyle,name,numericFilters,user}=req.query
            const queryObject={}
             if(name){
         //the foreign expression below is for pattern matching where all strings matching with the name query are returned. options i is for ignoring thre caps or small
@@ -13,6 +13,9 @@
     }
     if(bodyStyle){
       queryObject.bodyStyle=bodyStyle
+    }
+     if(user){
+      queryObject.user=user
     }
     if(brand){
       queryObject.carType=brand
