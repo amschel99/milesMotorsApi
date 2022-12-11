@@ -87,7 +87,12 @@ const carsSchema= new mongoose.Schema(
             type:Number,
         },
         description:{
+            
             type:String
+        },
+        user:{
+            type:String
+
         }
     }
 )
