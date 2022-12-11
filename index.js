@@ -5,6 +5,7 @@ import connectDb from './db/config.js'
 import carsRouter from "./routes/cars.js"
 import carRouter from "./routes/car.js"
 import auth from "./routes/auth.js"
+import seller from './routes/seller.js'
 import cors from 'cors'
 dotenv.config()
 
@@ -29,6 +30,7 @@ app.use(express.json());
 app.use('/cars',carsRouter);
 app.use("/car",carRouter);
 app.use('/auth',auth);
+app.use('/seller', seller);
 
 
 app.listen(PORT, ()=>{
