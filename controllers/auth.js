@@ -26,6 +26,7 @@ try{
 
 
    const succesful= await usersModel.create(req.body)
+   
 res.json({message:"success", user:succesful})//has user.type and user.name  also
 
 }
