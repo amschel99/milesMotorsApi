@@ -5,12 +5,13 @@ const{_id}=req.params
         
         const car = await carsModel.findOneAndDelete({"_id":_id});
 
-        console.log(car)
+        console.log(car +'deleted')
         res.json({"message":"destroyed", "data":car});
        
 
     }
     catch(e){
+        console.error(error)
         return null
 
     }
