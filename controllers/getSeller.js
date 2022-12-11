@@ -2,11 +2,11 @@
  export const getSeller= async (req,res)=>{
 const{userId}=req.params
     try{
-        console.log(_id)
+        console.log(userId)
         const user = await usersModel.findOne({"_id":userId});
 
         console.log(user)
-       res.json(user)
+       res.json(user)// we can get user.email
        
 
     }
