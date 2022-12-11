@@ -5,6 +5,9 @@ export const registerSchema= joi.object({
 name:joi.string(),
 
 location:joi.string(),
+mobile:joi.string(),
+
+description:joi.string(),
 
 
 
