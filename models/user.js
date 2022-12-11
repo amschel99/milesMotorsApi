@@ -32,6 +32,15 @@ name:{
         enum:['buyer','seller'],
         default:'buyer'
 
+    },
+    mobile:{
+        type:String
+    },
+    location:{
+        type:String
+    },
+    description:{
+        type:String
     }
     }
 )
