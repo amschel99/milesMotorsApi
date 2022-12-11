@@ -1,9 +1,9 @@
  import carsModel from '../models/cars.js'
  export const deleteCar= async (req,res)=>{
-const{carId}=req.params
+const{_id}=req.params
     try{
         console.log(carId)
-        const car = await carsModel.findOneAndDelete({"carID":carId});
+        const car = await carsModel.findOneAndDelete({"_id":_id});
 
         console.log(car)
         res.json({"message":"destroyed", "data":car});
