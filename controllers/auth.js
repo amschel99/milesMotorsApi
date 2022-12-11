@@ -30,6 +30,7 @@ res.json({message:"success", user:succesful})//has user.type and user.name  also
 
 }
 catch (error){
+    console.log(error)
 res.status(500).send("Internal server error" +error)
 }
 }
