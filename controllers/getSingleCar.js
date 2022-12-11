@@ -2,7 +2,7 @@
  export const getSingleCar= async (req,res)=>{
 const{_id}=req.params
     try{
-        console.log(carId)
+       
         const car = await carsModel.findOne({"_id":_id});
 
         console.log(car)
@@ -11,6 +11,7 @@ const{_id}=req.params
 
     }
     catch(e){
+        console.log(e)
         return null
 
     }
