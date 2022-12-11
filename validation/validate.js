@@ -14,7 +14,7 @@ email: joi.string()
 password: joi.string()
         .pattern(new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/)),
 
-    repeat_password: joi.ref('password'),        
+      
 
 
 
