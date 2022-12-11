@@ -4,6 +4,10 @@ export const registerSchema= joi.object({
 
 name:joi.string(),
 
+location:joi.string(),
+
+
+
 email: joi.string()
         .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net','org', 'me', 'live'] } }),
 
