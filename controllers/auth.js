@@ -34,6 +34,7 @@ catch (error){
 res.status(500).send("Internal server error" +error)
 }
 }
+
 export const login =async (req,res)=>{
     try{
   const userExists= await usersModel.findOne({email:req.body.email})
