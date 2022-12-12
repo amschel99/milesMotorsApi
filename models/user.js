@@ -41,6 +41,15 @@ name:{
     },
     description:{
         type:String
+    },
+  facebook:{
+        type:String
+    },
+    twitter:{
+        type:String
+    },
+    instagram:{
+        type:String
     }
     }
 )

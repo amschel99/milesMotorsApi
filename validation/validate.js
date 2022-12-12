@@ -9,6 +9,11 @@ mobile:joi.string(),
 
 description:joi.string(),
 
+facebook:joi.string(),
+
+twitter:joi.string(),
+
+instagram:joi.string(),
 
 
 email: joi.string()
