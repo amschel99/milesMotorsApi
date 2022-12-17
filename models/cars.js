@@ -27,34 +27,34 @@ const carsSchema= new mongoose.Schema(
         },
        
         image2:{
-            type:String,
+            type:Buffer,
         },
        
         image3:{
-            type:String,
+            type:Buffer,
         },
        
         image4:{
-            type:String,
+            type:Buffer,
         },
        
         image5:{
-            type:String,
+             type:Buffer,
         },
         image6:{
-            type:String,
+             type:Buffer,
         },
         image7:{
-            type:String,
+            type:Buffer,
         },
         image8:{
-            type:String,
+            type:Buffer,
         },
         image9:{
-            type:String,
+             type:Buffer,
         },
         image10:{
-            type:String,
+            type:Buffer,
         },
         color: {
             type: String,
