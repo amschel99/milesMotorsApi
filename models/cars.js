@@ -94,7 +94,7 @@ const carsSchema= new mongoose.Schema(
           type: String,
         trim: true,
         lowercase: true,
-        unique: true,
+        
         validate: {
             validator: function(v) {
                 return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v);
