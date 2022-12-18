@@ -5,7 +5,7 @@ const{userId}=req.params
         console.log(userId)
         const user = await usersModel.findOne({"_id":userId});
 
-        console.log(user)
+        //console.log(user)
        res.json(user)// we can get user.email
        
 
