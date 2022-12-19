@@ -4,7 +4,11 @@ import mongoose from 'mongoose'
 const connect= (url)=>{
 
 
-    return mongoose.createConnection(url)
+    return mongoose.connect(url, {
+
+      
+
+    })
 }
 
 export default connect
