@@ -57,10 +57,20 @@ data= await carsModel.find(queryObject).limit(Number(dataAmount)).stream();
         data= await carsModel.find(queryObject).stream()
       }
 //tried streaming, I don't know if its going to work
+let results=[]
+data.on('error',(error)=>{
+  console.log(error)
+})
+data.on("data",(document)=>{
+results.push(document)
+})
 
+data.on('end',()=>{
+  res.json(results)
+})
 
    
-data.pipe(res)
+
     //console.log(req.params)
     //res.status(200).json(data)
 
