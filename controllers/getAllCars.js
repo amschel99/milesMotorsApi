@@ -51,13 +51,13 @@
         let data;
         
       if(dataAmount){
-data= await carsModel.find(queryObject).limit(Number(dataAmount));
+data= await carsModel.find(queryObject).limit(Number(dataAmount)).stream();
       }
       else{
-        data= await carsModel.find(queryObject)
+        data= await carsModel.find(queryObject).stream()
       }
 //tried streaming, I don't know if its going to work
-      const dataStream=fs.createReadStream(data)
+
 
    
 data.pipe(res)
