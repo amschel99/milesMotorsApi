@@ -11,7 +11,7 @@ import bodyParser from 'body-parser'
 import path from 'path'
  import crypto from 'crypto'
  import multer from 'multer'
- import GridFsStorage from 'multer-gridfs-storage'
+ import {GridFsStorage} from 'multer-gridfs-storage'
  import Grid from 'gridfs-stream'
  import methodOverride from 'method-override'
 dotenv.config()
