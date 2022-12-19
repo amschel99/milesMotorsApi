@@ -44,9 +44,7 @@ let gfs;
 const start= async  ()=>{
 
 try{
-const connn= await connectDb(process.env.MONGO_URI,{
-
-})
+const connn= await connectDb(process.env.MONGO_URI)
 
 connn.once("open",()=>{ 
     gfs=Grid(connn.db,mongoose.mongo)
