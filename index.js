@@ -20,7 +20,7 @@ const app= express()
 
 
 const PORT= process.env.PORT || 8000
-app.use(methodOverride(_method))
+app.use(methodOverride("_method"))
 app.use( bodyParser.json({limit: '50mb'}) );
 app.use(bodyParser.urlencoded({
   limit: '50mb',
