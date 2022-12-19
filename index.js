@@ -94,8 +94,9 @@ crypto.randomBytes(16,(err,buffer)=>{
 )
 const upload= multer({storage});
 //the name files must match the name of the input file
-app.post('/upload',upload.array('files',5),(req,res)=>{
+app.post('/upload',upload.array('file',5),(req,res)=>{
 const file=req.file
+console.log(file)
 res.json(file)
 })
 start()
