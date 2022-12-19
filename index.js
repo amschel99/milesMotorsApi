@@ -79,7 +79,7 @@ const storage=new GridFsStorage(
         url:process.env.MONGO_URI,
         file:(req,file)=>{
             return new Promise((resolve,reject)=>{
-crypto.randomBytes(16,(err,buffer)=>{
+crypto.randomBytes(16,(err,buf)=>{
     if(err){
         reject(err)
     }
