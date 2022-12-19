@@ -91,9 +91,8 @@ const carsSchema= new mongoose.Schema(
             type:String
         },
         user:{
-          type: String,
-          unique:false
-        
+          type: String
+         
 
         }
     }
