@@ -51,28 +51,18 @@
         let data;
         
       if(dataAmount){
-data= await carsModel.find(queryObject).limit(Number(dataAmount)).stream();
+data= await carsModel.find(queryObject).limit(Number(dataAmount))
       }
       else{
-        data= await carsModel.find(queryObject).stream()
+        data= await carsModel.find(queryObject)
       }
 //tried streaming, I don't know if its going to work
-let results=[]
-data.on('error',(error)=>{
-  console.log(error)
-})
-data.on("data",(document)=>{
-results.push(document)
-})
 
-data.on('end',()=>{
-  res.json(results)
-})
 
    
 
-    //console.log(req.params)
-    //res.status(200).json(data)
+   
+    res.status(200).json(data)
 
     }
     catch(error){
