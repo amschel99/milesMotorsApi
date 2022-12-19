@@ -22,39 +22,39 @@ const carsSchema= new mongoose.Schema(
         },
         
         carImg:{
-            type:Buffer,
+            type:String,
             required:[true, " a product must have an Image"]
         },
        
         image2:{
-              type:Buffer,
+              type:String,
         },
        
         image3:{
-              type:Buffer,
+              type:String,
         },
        
         image4:{
-              type:Buffer,
+              type:String,
         },
        
         image5:{
-              type:Buffer,
+              type:String,
         },
         image6:{
-            type:Buffer,
+            type:String,
         },
         image7:{
-           type:Buffer,
+           type:String,
         },
         image8:{
-             type:Buffer,
+             type:String,
         },
         image9:{
-             type:Buffer,
+             type:String,
         },
         image10:{
-             type:Buffer,
+             type:String,
         },
         color: {
             type: String,
