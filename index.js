@@ -14,6 +14,7 @@ import path from 'path'
  import {GridFsStorage} from 'multer-gridfs-storage'
  import Grid from 'gridfs-stream'
  import methodOverride from 'method-override'
+ import mongoose from "mongoose"
 dotenv.config()
 
 const app= express()
@@ -44,8 +45,9 @@ let gfs;
 const start= async  ()=>{
 
 try{
-const connn= await connectDb(process.env.MONGO_URI)
 
+ await connectDb(process.env.MONGO_URI,{})
+const connn= mongoose.createConnection(process.env.MONGO_URI)
 connn.once("open",()=>{ 
     gfs=Grid(connn.db,mongoose.mongo)
    gfs.collection("uploads")
