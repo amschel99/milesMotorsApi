@@ -1,4 +1,6 @@
  import carsModel from '../models/cars.js'
+ import fs from "fs"
+
  export const  getAllCars=async  (req,res)=>{
     try{
           const {brand,mileage,bodyStyle,name,numericFilters,user}=req.query
@@ -54,13 +56,13 @@ data= await carsModel.find(queryObject).limit(Number(dataAmount));
       else{
         data= await carsModel.find(queryObject)
       }
-
-      
+//tried streaming, I don't know if its going to work
+      const dataStream=fs.createReadStream(data)
 
    
-
-    console.log(req.params)
-    res.status(200).json(data)
+data.pipe(res)
+    //console.log(req.params)
+    //res.status(200).json(data)
 
     }
     catch(error){
