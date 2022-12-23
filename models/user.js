@@ -41,7 +41,14 @@ name:{
     },
     instagram:{
         type:String
-    }
+    },
+    longitude: {
+            type: String,
+
+        },
+        latitude: {
+            type: String
+        }
     }
 )
 export default  mongoose.model("usersModel",usersSchema  )

@@ -95,14 +95,8 @@ const carsSchema = new mongoose.Schema(
             unique: false
 
 
-        },
-        longitude: {
-            type: String,
-
-        },
-        latitude: {
-            type: String
         }
+        
     }
 )
 export default mongoose.model("CarsModel", carsSchema)
