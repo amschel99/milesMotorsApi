@@ -14,6 +14,8 @@ facebook:joi.string(),
 twitter:joi.string(),
 
 instagram:joi.string(),
+longitude:joi.string(),
+latitude:joi.string(),
 
 
 email: joi.string()
